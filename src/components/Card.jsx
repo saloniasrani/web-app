@@ -107,7 +107,7 @@ function onlyLettersAndSpaces(str) {
   return /^[A-Za-z\s]*$/.test(str);
 }
 function luhnCheck(num) {
-  if (num.length === 0) {
+  if (num.length === 0  && num.length!==16) {
     return false;
   }
   let arr = (num + "")
