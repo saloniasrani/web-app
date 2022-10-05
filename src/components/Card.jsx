@@ -17,7 +17,6 @@ function Card(props) {
     const isNumberValid = luhnCheck(cnumber);
     const isCvvValid = cvv.length === 3;
     const isExpDateValid = new Date(expdate) > new Date();
-    console.log({ isNameValid, isCvvValid, isNumberValid, isExpDateValid        })
 
     setError({ isNameValid, isCvvValid, isNumberValid, isExpDateValid });
     if (isNameValid && isNumberValid && isCvvValid && isExpDateValid) {
