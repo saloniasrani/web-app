@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="card.css" />
+    <title>Credit Card Form</title>
+  </head>
+  <body>
+    <div class="card-container">
+      <label for="cname">CARDHOLDER NAME</label>
+      <input type="text" id="cname" name="cname" />
+      <span class="error" id="cname_error">Name should not contain special characters or numbers</span>
+      <label for="cnumber">CARD NUMBER</label>
+      
+      <input
+        type="number"
+        id="cnumber"
+        name="cnumber"
+        maxlength="19"
+        placeholder="XXXX XXXX XXXX XXXX"
+      />
+      <span class="error" id="cnumber_error">Number should be a valid pattern</span>
+
+
+      <div class="grp-container">
+        <div>
+          <label for="cvv">CVV</label>
+          <input type="number" id="cvv" name="cvv" max="999" />
+        </div>
+        <div>
+          <label for="expdate">EXPIRY DATE</label>
+          <input type="date" id="expdate" name="expdate" />
+          <span class="error" id="expdate_error">Expiry date should be greator than today's date</span>
+
+        </div>
+      </div>
+      <button onclick="validateForm()" class="button">Pay</button>
+    </div>
+    <script src="card.js"></script>
+
+   
+  </body>
+</html>
